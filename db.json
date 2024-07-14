@@ -1,4 +1,6 @@
 {
   "produtos": [],
-  "videos":{}
+  "videos":{
+    "frontend":[]
+  }
 }
