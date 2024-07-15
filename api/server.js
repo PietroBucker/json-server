@@ -20,7 +20,7 @@ server.use(middlewares)
 // Add this before server.use(router)
 server.use(jsonServer.rewriter({
     '/api/*': '/$1',
-    '/video/*': '/videos/$1'
+    '/videos/*': '/videos/$1'
 }))
 server.use(router)
 server.listen(3000, () => {
