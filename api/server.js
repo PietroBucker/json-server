@@ -20,8 +20,8 @@ server.use(middlewares)
 // Add this before server.use(router)
 server.use(jsonServer.rewriter({
     '/api/*': '/$1',
-    '/videos/frontend*': '/frontend$1', // Rota para mapear /videos/frontend para /frontend
-    '/videos/backend*': '/backend$1' // Rota para mapear /videos/backend para /backend
+    '/videos/frontend*': '/frontend/$1', // Rota para mapear /videos/frontend para /frontend
+    '/videos/backend*': '/backend/$1' // Rota para mapear /videos/backend para /backend
 }))
 server.use(router)
 server.listen(3000, () => {
