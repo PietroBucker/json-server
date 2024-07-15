@@ -19,9 +19,8 @@ const middlewares = jsonServer.defaults()
 server.use(middlewares)
 // Add this before server.use(router)
 server.use(jsonServer.rewriter({
-    '/api/*': '/$1',
-    '/videos/front': '/videos/$1',
-    '/videos/back': '/videos/backend'
+    '/api/videos/front*': '/videos/front/$1', // Rota para /api/videos/front redirecionar para /videos/front
+  '/api/videos/back*': '/videos/back/$1' // Rota para /api/videos/back redirecionar para /videos/back
 }))
 server.use(router)
 server.listen(3000, () => {
