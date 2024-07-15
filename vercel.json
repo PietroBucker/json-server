@@ -7,16 +7,13 @@
   },
   "rewrites": [
     {
-      "source": "/api/videos/front(.*)",
-      "destination": "/api/server.js/videos/front$1"
-    },
-    {
-      "source": "/api/videos/back(.*)",
-      "destination": "/api/server.js/videos/back$1"
-    },
-    {
       "source": "/(.*)",
-      "destination": "/api/server.js/$1"
+      "destination": "api/server.js"
     }
+  ],
+  "routes": [
+    { "src": "/api/videos/front", "dest": "/videos/front" },
+    { "src": "/api/videos/back", "dest": "/videos/back" },
+    { "src": "/api/*", "dest": "/$1" }
   ]
 }
