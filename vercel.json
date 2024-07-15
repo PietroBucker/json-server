@@ -11,9 +11,4 @@
       "destination": "api/server.js"
     }
   ],
-  "routes": [
-    { "src": "/api/videos/front", "dest": "/videos/front" },
-    { "src": "/api/videos/back", "dest": "/videos/back" },
-    { "src": "/api/*", "dest": "/$1" }
-  ]
 }
